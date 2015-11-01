@@ -1,0 +1,12 @@
+---
+- hosts: PIMserver
+  become: yes
+  tasks:
+    - name: Installs lighttpd web server
+      apt: pkg=lighttpd state=installed update_cache=true
+      notify:
+        - start lighttpd
+
+  handlers:
+    - name: start lighttpd
+      service: name=lighttpd state=started

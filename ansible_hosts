@@ -20,7 +20,7 @@ benetoufr
 ## send this files and others to github
 ## clarify roles vs groups
 ## list software required
-### machinesWithXorg ratpoison vimperator (with their .rc) git
+### machinesWithXorg ratpoison vimperator (with their .rc) git urxvt (with url-picker plugin)
 ### machinesWithoutXorg ?
 ### PIMserver lighttpd php>5
 ### all rdiff-backup .bashrc
