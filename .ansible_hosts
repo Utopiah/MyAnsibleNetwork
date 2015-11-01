@@ -1,0 +1,29 @@
+[machinesWithXorg]
+#self, laptop, Ansible master
+laptop ansible_host=127.0.0.1 ansible_connection=local
+#deskptop
+desktop ansible_host=192.168.1.3
+#Paola's laptop, only accessible via Ethernet, Belgacom doing node isolation on WiFi
+#paola 192.168.1.6
+
+[machinesWithoutXorg]
+# OVH Benetou.fr server
+benetoufr ansible_host=5.39.79.30 ansible_port=22022
+
+[alwaysOn]
+benetoufr
+
+[PIMserver]
+benetoufr
+
+#TODO
+## send this files and others to github
+## clarify roles vs groups
+## list software required
+### machinesWithXorg ratpoison vimperator (with their .rc) git
+### machinesWithoutXorg ?
+### PIMserver lighttpd php>5
+### all rdiff-backup .bashrc
+## list data required
+### machinesWithXorg ratpoisonrc vimperatorrc prototypes .Xdefaults
+### PIMserver wiki.d
